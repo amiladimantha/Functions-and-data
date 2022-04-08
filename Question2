@@ -1,0 +1,22 @@
+//19000502 - W.A.D.Gunasekara
+
+object Q2 extends  App {
+
+  class Rational(x : Int,y : Int){
+    def numer : Int = x
+    def denom: Int = y
+    def neg: Rational = new Rational(numer*(-1),denom)
+    
+    def -(r : Rational) = new Rational((this.numer*r.denom)-(this.denom*r.numer),this.denom*r.denom)
+
+    def Print : String = numer.toString + "/" + denom.toString
+
+  }
+
+  var x = new Rational(3,4)
+  var y = new Rational(5,8)
+  var z = new Rational(2,7)
+
+  println((x-y-z).Print)
+
+  }
