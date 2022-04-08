@@ -1,0 +1,25 @@
+//19000502 - W.A.D.Gunasekara
+
+object Q3 extends  App{
+  class Account ( x:String , y: Int , z : Double){
+
+    val name : String = x
+    val accNum : Int = y
+    var balance : Double = z
+
+    def withdraw( amount : Double ) = this.balance -= amount
+
+    def deposit ( amount : Double ) = this.balance += amount
+
+    def transfer( amount : Double , that : Account ): Unit = {
+      this.balance =  this.balance - amount
+      that.balance = that.balance + amount
+    }
+
+
+    @Override
+    override def toString() : String = "name : " + this.name + "\n Account Number : " + this.accNum + "\n Balance : " + this.balance
+
+  }
+
+}
