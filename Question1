@@ -1,0 +1,18 @@
+//19000502 - W.A.D.Gunasekara
+
+object Q1 extends  App {
+
+  class Rational(x : Int,y : Int){
+    def numer : Int = x
+    def denom: Int = y
+    def neg: Rational = new Rational(numer*(-1),denom)
+    def Print : String = numer.toString + "/" + denom.toString
+  }
+
+  var x = new Rational(1,2)
+  var y = new  Rational(3,2)
+
+  println(x.neg.Print)
+  println(y.neg.Print)
+
+  }
